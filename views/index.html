@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lat-Longs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/css/dataTables.bootstrap4.css" />
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h3 class="display-4">Lat-Long fetching from google</h3>
+            <p class="lead">Enter key word in the search box</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-bottom: 20px">
+            <div class="col-lg-12" style="margin-bottom: 20px">
+                <form class="form-inline cityid-form">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon">Start</div>
+                        <input type="number" class="form-control" id="start" placeholder="Starting id">
+                    </div>
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon">End</div>
+                        <input type="number" class="form-control" id="end" placeholder="Ending id">
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Get Cities</button>
+                </form>
+            </div>
+            <div class="col-lg-12">
+                <form class="search-form">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" id="next" type="button">Next</button>
+                        </span>
+                        <input type="text" class="form-control" id="inputCity" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="submit">Search</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-12 details">
+                <div class="list-group"></div>
+            </div>
+        </div>
+        <table id="data" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>cityId</th>
+                    <th>City-en</th>
+                    <th>City-hi</th>
+                    <th>State-en</th>
+                    <th>State-hi</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js" charset="utf-8"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.bootstrap4.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js" charset="utf-8"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js" charset="utf-8"></script>
+    <script src="/scripts.js" charset="utf-8"></script>
+</body>
+
+</html>
